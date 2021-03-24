@@ -1,7 +1,7 @@
 # youtube
 
 
-#Web View
+# Web View
 ![image](https://user-images.githubusercontent.com/55592487/112288425-53ece200-8cb3-11eb-856d-a0dfc7e7f000.png)
 
 
@@ -9,7 +9,7 @@
 
 
 
-#Mobile View
+# Mobile View
 
 ![image](https://user-images.githubusercontent.com/55592487/112288900-d2e21a80-8cb3-11eb-8a49-f3a933bf9b62.png)
 
