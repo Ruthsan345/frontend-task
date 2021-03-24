@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Youtube</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+
+<body>
+	<!-- Top navbar -->
+	<nav class="container-fluid fixed-top bg-white pt-2" id="top_nav">
+		<div class="row">
+			<div class="col-4 pl-4">
+				<a class="navbar-brand" href="index.html"><img src="images/logo.jpg"></a>
+			</div>
+			<div class="col-4">
+				<form action="result.html" method="get">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control search" placeholder="Search">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-outline-secondary" data-toggle="tooltip"
+								data-placement="bottom" title="Search!"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-4 text-right">
+				<a href="login.html" class="btn btn-outline-primary"><i class="fas fa-user-circle"
+						style="font-size: 20px;"></i> <span style="font-size:14px; font-weight: 600;">SIGN IN</span></a>
+			</div>
+		</div>
+	</nav>
+	<!-- Top navbar -->
+
+	<!-- mobile top navbar -->
+	<nav class="container-fluid fixed-top bg-white pt-3" id="top_nav_mobile">
+		<div class="row">
+			<div class="col-3 pl-4">
+				<a class="navbar-brand" href="index.html"><img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARUAAAC2CAMAAADAz+kkAAAAzFBMVEUAAAD////bJyTKHSDGGx/gKibZJiTCGR7NHyHVJCPHHB/aJyTfKibjLCbQISHpLiigHxszCAirFBqUHRnlhYTfg4SaHhr6+fnx7e3p5+fp4uLLAAChExg3CglKDgyBGRaKGxdyFRPYGBXVAADenJzNDxGYEhcTAwMoBwZCDAtUEA5dEg9qFBJ5GBSGGhZlFBG7JCDAJSAmBwYQAwIdBQTvvr7fkJDm1tbddXTlzMzca2vaYWDkwMDZVlXYS0risbHXQD/TLy/yy8v34OBSr65nAAAEEElEQVR4nO3c61baWhSG4ZAQCDRETBTkmISTIgGCVnvarbXe/z11RbTabh1dM+ysuZd8z6/WAQznO2ZiQMQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOB/5PRsMB+eL9ZJvAzDVRQFQdBqtZqPxL/FV4JoFYbLOFkvzofzwdl77m+6AIN1GDT9dOPU3IP87IpX36TN1ioecg+0uzh9NlljJ0+PY0Vab8/S3bHEq4Ga3KPldrkppsl9F1fTA+miVlyUrEvCPWAel5Uim2RZFtwj5pAe2MVq2JfcM5Itio5i2xqecjeNwqvYDd1+QA+KXxWxLBH3mERBwy2e7XCPSeQoOIDEsgy45yQ5U7EqrtsIuQclidVUsX3uQUmatpIqrsc9KMnGNpXQ62ez56qpcjDnnpRCTROxK2vuSQneN1RVWXKPSjBXVcUOuEclWDTeSTLHpuxNX+Lq9AQxka0yOrqq7dLF1emCJbQrckZHpdLEHJmSN/8XM+UelSBwCVVKJ9ejvF3MKveoBC3ZIe+rlErd49EoXxaLe1SCPrFKqf3hKF+XGveoBD61Sqnd+fBxnKcL96gEKbmKOLt0Pn2mdzG5RyVIKzU5z6qU2t3Opy9jU/KeD1yNnh5u8lQR69Lt/POV1sW+4J5VXjVfFbEuosu38TtClUPuWeVVZYf6o0q2Lt3OzfexbNWauxdVsnURXW57kg9g7keV7bp0J55clzdZZfpCle26dCe1Ear8uS6iy/XtW6viyXmlyv0Po+7k9u8Ps1dVxLpkZ5a/P8DbrHL8SpSr257UA1T2qMrVd5k90a6KZJSXq/z4Jrcn+1Tlx1f5JvtS5e5Lb0qIolWVTc4qd59pTfSqknqOnN+q3H3sTSXv90tFo1cS8lQ5ORJ7Qo3i1DR61cknVzk5pu9JxtPoPbd9YpX2db4mogr3qARNUpX29TRnE8epc49KMKNUmUx7eZs4jk6/O4w8S870+MbpOZI3foGj0++Zl7JVLG+XJqKKTu9JSKSr7Mjpc49KcK6syox7VIK5sioR96gEF8qqxNyjUlh1NTyt/squqiiLp9W7kH1VVTR6cigubhVV0enS1jBiq6yCpdNFnGEMHDVV9PqrKaOqpIqj1cnWMAIlh5BepxXDGKo4hOoR95hUqYIqlkYv8G8lVrVoZZ2eMD/w60VX0W9VDOOwXHQUrZ4ZPhqWC+2i27XKo8O0wIOoruWm3AurBXWxfA3PKU/ifrle/0+PJHGZUu6fc8+1s/k6nPX97TjPSRV4umITd66mfn8WvYWP0Xvm9OIw+7DFRZLEy2W4WkVBMBP6Gf+X7H/Zl2cPH7sYJ9uPXTzl/vYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4MFPgKkRu3KMO/8AAAAASUVORK5CYII="
+						class="mb-2" height="35" width="65"></a>
+			</div>
+			<div class="col-7">
+				<form>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control search" placeholder="Search">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="bottom"
+								title="Search!"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-2 text-right">
+				<a href="login.html"><i class="fas fa-user-circle" style="font-size: 30px;"></i></a>
+			</div>
+		</div>
+	</nav>
+	<!-- mobile top navbar -->
+
+	<!-- sidebar -->
+	<nav class="main-nav">
+		<ul>
+			<li class="">
+				<a href="index.html">
+					<span class="fa fa-2x">
+						<svg style="display: block; height: 34px; width: 34px;margin: auto;" viewBox="0 0 24 24">
+							<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8" fill="red"></path>
+						</svg>
+					</span>
+					<span class="nav-text">
+						Home
+					</span>
+				</a>
+			</li>
+
+			<li class="has-subnav">
+				<a href="trending.html">
+					<span class="fa fa-2x">
+						<svg style="display: block; height: 34px; width: 34px;margin: auto;" viewBox="0 0 24 24">
+							<path
+								d="M17.53 11.2c-.23-.3-.5-.56-.76-.82-.65-.6-1.4-1.03-2.03-1.66-1.46-1.46-1.78-3.87-.85-5.72-.9.23-1.75.75-2.45 1.32C8.9 6.4 7.9 10.07 9.1 13.22c.04.1.08.2.08.33 0 .22-.15.42-.35.5-.22.1-.46.04-.64-.12-.06-.05-.1-.1-.15-.17-1.1-1.43-1.28-3.48-.53-5.12C5.87 10 5 12.3 5.12 14.47c.04.5.1 1 .27 1.5.14.6.4 1.2.72 1.73 1.04 1.73 2.87 2.97 4.84 3.22 2.1.27 4.35-.12 5.96-1.6 1.8-1.66 2.45-4.3 1.5-6.6l-.13-.26c-.2-.45-.47-.87-.78-1.25zm-3.1 6.3c-.28.24-.73.5-1.08.6-1.1.38-2.2-.16-2.88-.82 1.2-.28 1.9-1.16 2.1-2.05.17-.8-.14-1.46-.27-2.23-.12-.74-.1-1.37.2-2.06.15.38.35.76.58 1.06.76 1 1.95 1.44 2.2 2.8.04.14.06.28.06.43.03.82-.32 1.72-.92 2.26z"
+								fill="#606060"></path>
+						</svg>
+					</span>
+					<span class="nav-text">
+						Trending
+					</span>
+				</a>
+			</li>
+
+			<li class="has-subnav mb-2">
+				<a href="subscription.html">
+					<span class="fa fa-2x">
+						<svg style="display: block; height: 34px; width: 34px;margin: auto;" viewBox="0 0 24 24">
+							<path
+								d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z"
+								fill="#606060"></path>
+						</svg>
+					</span>
+					<span class="nav-text">
+						Subscribe
+					</span>
+				</a>
+			</li>
+
+			<li class="has-subnav ">
+				<a href="library.html">
+					<span class="fa fa-2x">
+						<svg style="display: block; height: 34px; width: 34px;margin: auto;" viewBox="0 0 24 24">
+							<path
+								d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"
+								fill="#606060"></path>
+						</svg>
+					</span>
+					<span class="nav-text">
+						Library
+					</span>
+				</a>
+			</li>
+			<li class="has-subnav">
+				<a href="history.html">
+					<span class="fa fa-2x">
+						<svg style="display: block; height: 34px; width: 34px;margin: auto;" viewBox="0 0 24 24">
+							<path
+								d="M11.9 3.75c-4.55 0-8.23 3.7-8.23 8.25H.92l3.57 3.57.04.13 3.7-3.7H5.5c0-3.54 2.87-6.42 6.42-6.42 3.54 0 6.4 2.88 6.4 6.42s-2.86 6.42-6.4 6.42c-1.78 0-3.38-.73-4.54-1.9l-1.3 1.3c1.5 1.5 3.55 2.43 5.83 2.43 4.58 0 8.28-3.7 8.28-8.25 0-4.56-3.7-8.25-8.26-8.25zM11 8.33v4.6l3.92 2.3.66-1.1-3.2-1.9v-3.9H11z"
+								fill="#606060"></path>
+						</svg>
+					</span>
+					<span class="nav-text">
+						History
+					</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- sidebar -->
+
+	<!-- main content -->
+	<div class="row main_container">
+		<div class="col-md-2"></div>
+		<div class="col-md-10">
+			<!-- Recommended section -->
+			<div class="container-fluid">
+				<div class="grid_title">Recommended</div>
+				<div class="row">
+					<div class="col-md-3 col-sx-1 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/vi/U38i32CpYow/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLByM6udUW2hT-1QWR56_dP9HfeDFA"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwnju7o49zQxsimkmBbe1ot0hTknfhE1eFYIKfog2yA=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											Forged in Fire: 4 EPIC Blades That WOULDN'T KEAL | History</p>
+										<p style="color:#606060;">
+											History <i class="fas fa-check-circle"></i><br>
+											70M views 7 months ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/an_webp/qG0f8qI2-Dc/mqdefault_6s.webp?du=3000&sqp=CNvY64IG&rs=AOn4CLDtzhkfuzEwvfD5YlBFvI_0L1xRDg"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwngnxSQTOBBNf-lTyDniAK7p11Ev4UgactKLUYVfjQ=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											FilterCopy | Holi Special: Story Of 4 Single Friends | Ft.@That's So Viraj​,
+											Anant, Natasha, Revathi</p>
+										<p style="color:#606060;">
+											FilterCopy <i class="fas fa-check-circle"></i><br>
+											70M views 1 hour ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/an_webp/zEXW_NUXEb8/mqdefault_6s.webp?du=3000&sqp=COXg64IG&rs=AOn4CLB5RfNzjXICir862ip6wmHGB-R5uA"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwnh_K6aeqm8emeehhvj8KGbsE1rPlJhE3Mnt6BAhLOY=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											Justice League Snyder Cut - Official Trailer #2 (2021) Henry Cavill, Ben
+											Affleck, Gal Gadot</p>
+										<p style="color:#606060;">
+											IGN <i class="fas fa-check-circle"></i><br>
+											50M views 2 weeks ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/vi/hoNb6HuNmU0/hq720.jpg" alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/a-/AOh14GinKFFtcXMMwrPfhFbie8tgLV0vMzfvVFSMlw=s68-c-k-c0x00ffffff-no-rj-mo"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha |
+											Pritam, Amitabh B|Arijit Singh</p>
+										<p style="color:#606060;">
+											T-Series <i class="fas fa-check-circle"></i><br>
+											70M views 7 months ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/vi/O6po38LQA0k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEfaPE-Hvimf7HCzQPa_ObM4JZUg"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwngnxSQTOBBNf-lTyDniAK7p11Ev4UgactKLUYVfjQ=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											FilterCopy | Boyfriend Shirt VS Boyfriend’s Shirt | Ft. Aisha Ahmed & Sheeba
+											Chaddha | #Shorts</p>
+										<p style="color:#606060;">
+											T-Series <i class="fas fa-check-circle"></i><br>
+											70M views 7 months ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/an_webp/tt2k8PGm-TI/mqdefault_6s_480x270.webp?du=3000&sqp=CJjR64IG&rs=AOn4CLCI8oAcwUa3IAOh9JA2Y0--0Y9s_g"
+									alt="
+									image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwniL5veQTXQ9zeWt6CTLmyWoF3_ab9-_NO_NUJt4Tg=s88-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											ZAYN - Dusk Till Dawn (Official Video) ft. Sia</p>
+										<p style="color:#606060;">
+											ZAYN<i class="fas fa-check-circle"></i><br>
+											70M views 7 months ago
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/an_webp/YbejtMd0M_Y/mqdefault_6s.webp?du=3000&sqp=CLDx64IG&rs=AOn4CLAFcRzgOILSTg3WD8HTG-49kmiBKA"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwnhe7O9GvvpT9Xpju21bHY9He61Tpv-GT56cKVipzjs=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											VFX Secrets of Marvel Studios' WandaVision!
+										</p>
+										<p style="color:#606060;">
+											Marvel Entertainment
+											<i class="fas fa-check-circle"></i><br>
+											132,567 views•Mar 23, 2021
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 p-2">
+						<a href="">
+							<div class="card">
+								<img src="https://i.ytimg.com/an_webp/9tmsKRLweV8/mqdefault_6s.webp?du=3000&sqp=CIfA64IG&rs=AOn4CLBBRSLcmZDdqH3-PfONTSfv1K4Efg"
+									alt="image" height="174" />
+								<div class="row">
+									<div class="col-2 mt-3">
+										<img id="img" width="48"
+											src="https://yt3.ggpht.com/ytc/AAUvwnixk3c5W5WAOEmva_liIs5uHVPhFCJB1aeSMRI6Gw=s68-c-k-c0x00ffffff-no-rj"
+											class="rounded-circle">
+									</div>
+									<div class="col-10 mt-3">
+										<p class="mb-2"
+											title="Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh">
+											2018 Jaguar E-Pace - interior Exterior and Drive</p>
+										<p style="color:#606060;">
+											AutoShow
+											<i class="fas fa-check-circle"></i><br>
+											1,645,530 views•Jul 15, 2017
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- Recommended Section -->
+
+			<hr>
+
+			<p><br></p>
+			<p><br></p>
+		</div>
+	</div>
+	<!-- main content -->
+
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+</body>
+
+</html>
